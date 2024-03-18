@@ -1,4 +1,4 @@
-module github.com/Hi-Im-Toyo
+module github.com/Hi-Im-Toyo/Golang_serverless
 
 go 1.22.1
 

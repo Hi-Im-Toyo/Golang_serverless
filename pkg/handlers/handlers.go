@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/Hi-Im-Toyo/Golang_serverless/pkg/user"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
