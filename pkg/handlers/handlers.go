@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/Hi-Im-Toyo/Golang_serverless/pkg/user"
@@ -39,6 +40,7 @@ func CreateUser(req events.APIGatewayProxyRequest, tableName string, dynaClient 
 
 	result, err := user.CreateUser(req, tableName, dynaClient)
 	if err != nil {
+		fmt.Println(err)
 		return apiResponse(http.StatusBadRequest, ErrorBody{aws.String(err.Error())})
 	}
 	return apiResponse(http.StatusCreated, result)
